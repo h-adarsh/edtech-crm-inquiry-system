@@ -53,5 +53,9 @@ SYNC_LOG.md
 !README.md
 !readme.md
 
+# Ignore PDF files
+*.pdf
+
+
 
 
