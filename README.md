@@ -8,7 +8,7 @@ A full-stack EdTech CRM and inquiry management system built for educational inst
 
 - **Frontend (Vercel):** `https://edtech-crm.vercel.app` *(Replace with deployed URL)*
 - **Backend API (Render):** `https://edtech-crm-api.onrender.com` *(Replace with deployed URL)*
-- **GitHub Repository:** Clean monorepo containing `frontend/` and `backend/`
+- **GitHub Repository:** [https://github.com/h-adarsh/edtech-crm-inquiry-system](https://github.com/h-adarsh/edtech-crm-inquiry-system)
 
 > [!NOTE]
 > **Render Cold Start Notice:**
@@ -138,8 +138,8 @@ A full-stack EdTech CRM and inquiry management system built for educational inst
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/edtech-crm.git
-cd edtech-crm
+git clone https://github.com/h-adarsh/edtech-crm-inquiry-system.git
+cd edtech-crm-inquiry-system
 ```
 
 ### Step 2: Set up Database in Supabase
