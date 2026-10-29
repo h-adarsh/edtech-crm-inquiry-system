@@ -26,7 +26,12 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, server-to-server)
-      if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+      // or from localhost, 127.0.0.1, or local LAN IP addresses (e.g. testing on mobile phone)
+      const isLocalNetwork = /^http:\/\/(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+):5173$/.test(
+        origin
+      );
+
+      if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes('*') || isLocalNetwork) {
         return callback(null, true);
       }
       return callback(new Error(`CORS blocked for origin: ${origin}`));

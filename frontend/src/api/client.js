@@ -1,4 +1,15 @@
-const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5050/api').replace(/\/$/, '');
+const getBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hostname &&
+    window.location.hostname !== 'localhost' &&
+    window.location.hostname !== '127.0.0.1'
+  ) {
+    return `http://${window.location.hostname}:5050/api`;
+  }
+  return (envUrl || 'http://localhost:5050/api').replace(/\/$/, '');
+};
 
 /**
  * Universal API request wrapper using standard browser fetch.
@@ -6,7 +17,8 @@ const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5050/api
  * Catches 401 Unauthorized responses and purges expired sessions.
  */
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE_URL}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`;
+  const baseUrl = getBaseUrl();
+  const url = `${baseUrl}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`;
 
   const headers = {
     'Content-Type': 'application/json',
