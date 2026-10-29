@@ -8,8 +8,8 @@ export default function Pagination({ page, totalPages, total, limit, onPageChang
   const endRecord = Math.min(page * limit, total);
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-6 py-4 bg-white border-t border-slate-200">
-      <div className="text-xs text-slate-500">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 bg-white rounded-xl border border-slate-200 shadow-xs mt-4 w-full">
+      <div className="text-xs text-slate-500 text-center sm:text-left">
         Showing <span className="font-semibold text-slate-800">{startRecord}</span> to{' '}
         <span className="font-semibold text-slate-800">{endRecord}</span> of{' '}
         <span className="font-semibold text-slate-800">{total}</span> results
@@ -25,7 +25,7 @@ export default function Pagination({ page, totalPages, total, limit, onPageChang
           <span>Previous</span>
         </button>
 
-        <div className="text-xs font-medium text-slate-600 px-2">
+        <div className="text-xs font-medium text-slate-600 px-1 sm:px-2">
           Page <span className="font-bold text-slate-900">{page}</span> of{' '}
           <span className="font-bold text-slate-900">{totalPages}</span>
         </div>
@@ -42,4 +42,3 @@ export default function Pagination({ page, totalPages, total, limit, onPageChang
     </div>
   );
 }
-

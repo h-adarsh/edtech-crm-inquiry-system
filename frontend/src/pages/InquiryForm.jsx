@@ -81,17 +81,17 @@ export default function InquiryForm() {
   };
 
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div className="py-6 sm:py-10 px-3.5 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
       {/* Hero Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-6 sm:mb-8">
         <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold mb-3">
           <Sparkles className="w-3.5 h-3.5 text-brand-600" />
           <span>EduConnect Admission & Inquiry Hub</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           How Can We Help You Today?
         </h1>
-        <p className="mt-2 text-base text-slate-600 max-w-xl mx-auto">
+        <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
           Whether you are a parent exploring admissions, a student applying for scholarships, or a school partnering with us, our counselors are here for you.
         </p>
       </div>
@@ -99,7 +99,7 @@ export default function InquiryForm() {
       {/* Main Card */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         {submitted ? (
-          <div className="p-8 sm:p-12 text-center animate-in fade-in duration-200">
+          <div className="p-6 sm:p-12 text-center animate-in fade-in duration-200">
             <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 className="w-9 h-9" />
             </div>
@@ -115,7 +115,7 @@ export default function InquiryForm() {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6 sm:p-10 space-y-6">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-10 space-y-5 sm:space-y-6">
             {serverError && (
               <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 flex items-start space-x-3 text-rose-800 text-sm">
                 <AlertCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />

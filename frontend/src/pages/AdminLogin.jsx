@@ -63,7 +63,7 @@ export default function AdminLogin() {
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 sm:p-8">
           {isExpired && (
             <div className="mb-5 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center space-x-2">
               <ShieldAlert className="w-4 h-4 shrink-0 text-amber-600" />

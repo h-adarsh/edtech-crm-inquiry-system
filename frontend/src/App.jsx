@@ -9,10 +9,10 @@ import Dashboard from './pages/Dashboard';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+      <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 w-full overflow-x-hidden">
         <Navbar />
         
-        <main className="flex-1">
+        <main className="flex-1 w-full overflow-x-hidden">
           <Routes>
             {/* Public Inquiry Form */}
             <Route path="/" element={<InquiryForm />} />
